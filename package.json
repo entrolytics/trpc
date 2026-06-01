@@ -1,6 +1,6 @@
 {
   "name": "@entrolytics/trpc-client",
-  "version": "2.2.3",
+  "version": "2.3.1",
   "description": "tRPC client for Entrolytics API",
   "files": [
     "dist"
@@ -29,22 +29,16 @@
     "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
-    "@entrolytics/api-types": "^2.2.0",
-    "@entrolytics/shared": "^2.4.0",
-    "@trpc/client": "^11.15.1",
-    "@trpc/server": "^11.15.1",
+    "@entrolytics/shared": "^2.4.1",
+    "@trpc/client": "^11.17.0",
+    "@trpc/server": "^11.17.0",
     "superjson": "^2.2.6"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
-    "typescript": "^6.0.2",
-    "vite-plus": "latest"
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.15",
+    "vite-plus": "^0.1.23"
   },
-  "packageManager": "pnpm@10.33.0",
-  "pnpm": {
-    "overrides": {
-      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
-    }
-  }
+  "packageManager": "pnpm@11.5.0"
 }

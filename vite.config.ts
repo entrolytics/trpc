@@ -14,7 +14,7 @@ export default defineConfig({
     },
   },
   staged: {
-    '*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}': 'vp check --fix',
+    "*.{ts,tsx,js,jsx,mjs,cjs,json,md,yml,yaml}": "vp check --fix",
   },
   lint: { options: { typeAware: true, typeCheck: true } },
 });

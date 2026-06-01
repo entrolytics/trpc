@@ -37,31 +37,91 @@ export interface OverviewResult {
 }
 
 export interface TopPageResult {
-  path: string;
+  path: string | null;
   views: number;
+  unique_visitors?: number;
+  avg_load_time?: number | null;
+  p95_load_time?: number | null;
 }
 
 export interface TopReferrerResult {
-  referrer: string;
+  referrer_domain: string | null;
   visits: number;
+  unique_visitors?: number;
 }
 
 export interface GeographyResult {
-  country: string;
-  visitors: number;
+  country: string | null;
+  city: string | null;
+  pageviews: number;
+  unique_visitors?: number;
 }
 
 export interface DeviceResult {
-  deviceType: string;
-  visitors: number;
+  device_type: string | null;
+  browser: string | null;
+  os: string | null;
+  pageviews: number;
+  unique_visitors?: number;
 }
 
 export interface TimeseriesPoint {
   date: string;
   pageviews: number;
   visitors: number;
-  visits: number;
-  bounces: number;
+  sessions: number;
+}
+
+export interface RealtimeVisitorsResult {
+  visitors: number;
+  sessions: number;
+  pageviews: number;
+}
+
+export interface RealtimeSeriesPoint {
+  time: string;
+  visitors: number;
+  pageviews: number;
+}
+
+export interface RealtimeCountryBreakdown {
+  country: string;
+  countryCode: string;
+  visitors: number;
+}
+
+export interface RealtimeActivePage {
+  path: string;
+  viewers: number;
+}
+
+export interface RealtimeRecentEvent {
+  timestamp: string;
+  event_type: string;
+  event_name: string | null;
+  path: string | null;
+  visitor_id?: string;
+  country: string | null;
+  device_type: string | null;
+  browser: string | null;
+}
+
+export interface RealtimeOverviewResult {
+  activeVisitors: number;
+  series: RealtimeSeriesPoint[];
+  countries: RealtimeCountryBreakdown[];
+  urls: Array<{ path: string; visitors: number }>;
+  events: Array<{
+    id: string;
+    type: string;
+    eventName: string;
+    path: string;
+    country: string;
+    countryCode: string;
+    device: string;
+    browser: string;
+    timestamp: string;
+  }>;
 }
 
 export interface SessionResult {
@@ -270,27 +330,26 @@ export interface FormFunnelStep {
 // ============================================================================
 
 export interface Deployment {
-  id: string;
   deployId: string;
-  websiteId: string;
   gitSha: string | null;
   gitBranch: string | null;
   source: DeploymentSource;
   deployUrl: string | null;
-  environment: string;
-  deployedAt: string;
+  environment: string | null;
+  deployedAt: Date;
   pageviews: number;
   visitors: number;
+  errors: number;
 }
 
 export interface DeploymentComparison {
   deployId: string;
   gitSha: string | null;
-  deployedAt: string;
+  deployedAt: Date;
   pageviews: number;
   visitors: number;
-  avgSessionDuration: number;
-  bounceRate: number;
+  avgLoadTime: number | null;
+  errorCount: number;
 }
 
 // ============================================================================
@@ -745,13 +804,23 @@ export interface AppRouter {
   // Realtime Router
   // -------------------------------------------------------------------------
   realtime: {
-    visitors: {
-      query: (input: { websiteId: string }) => Promise<{ count: number; change: number }>;
+    currentVisitors: {
+      query: (input: { websiteId: string }) => Promise<RealtimeVisitorsResult>;
+    };
+    recentEvents: {
+      query: (input: { websiteId: string; limit?: number }) => Promise<RealtimeRecentEvent[]>;
+    };
+    activePages: {
+      query: (input: { websiteId: string }) => Promise<RealtimeActivePage[]>;
+    };
+    timeSeries: {
+      query: (input: { websiteId: string }) => Promise<RealtimeSeriesPoint[]>;
+    };
+    countryBreakdown: {
+      query: (input: { websiteId: string }) => Promise<RealtimeCountryBreakdown[]>;
     };
     overview: {
-      query: (input: {
-        websiteId: string;
-      }) => Promise<{ pageviews: number; visitors: number; events: number }>;
+      query: (input: { websiteId: string }) => Promise<RealtimeOverviewResult>;
     };
   };
 
@@ -847,10 +916,11 @@ export interface AppRouter {
     get: { query: (input: { linkId: string }) => Promise<Link> };
     create: {
       mutate: (input: {
+        description?: string;
         name: string;
         url: string;
-        slug?: string;
-        orgId?: string;
+        slug: string;
+        orgId: string;
       }) => Promise<Link>;
     };
     update: { mutate: (input: { linkId: string; name?: string; url?: string }) => Promise<Link> };

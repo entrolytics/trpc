@@ -5,6 +5,7 @@ import SuperJSON from "superjson";
 
 export interface EntrolyticsTRPCClientConfig {
   apiUrl: string;
+  bearerToken?: string;
   apiKey?: string;
   headers?: Record<string, string>;
 }
@@ -23,7 +24,7 @@ export interface EntrolyticsTRPCClientConfig {
  *
  * const client = createClient<AppRouter>({
  *   apiUrl: 'https://api.entrolytics.click',
- *   apiKey: 'your-api-key'
+ *   bearerToken: 'your-cli-or-session-token'
  * });
  *
  * // Fully typed API calls
@@ -35,7 +36,8 @@ export function createClient<TRouter extends AnyRouter>(
 ): CreateTRPCClient<TRouter> {
   const linkOptions = {
     headers: () => ({
-      ...(config.apiKey && { Authorization: `Bearer ${config.apiKey}` }),
+      ...(config.bearerToken && { Authorization: `Bearer ${config.bearerToken}` }),
+      ...(config.apiKey && { "x-api-key": config.apiKey }),
       ...config.headers,
     }),
     transformer: SuperJSON,
@@ -120,5 +122,5 @@ export type {
   PaginatedResult,
 } from "./types.js";
 
-// Canonical AppRouter type source (server-generated contract)
-export type { AppRouter } from "@entrolytics/api-types";
+// Bundled AppRouter contract for external consumers
+export type { AppRouter } from "./types.js";
