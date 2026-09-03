@@ -122,5 +122,5 @@ export type {
   PaginatedResult,
 } from "./types.js";
 
-// Bundled AppRouter contract for external consumers
-export type { AppRouter } from "./types.js";
+// Canonical AppRouter contract generated from the production API router.
+export type { AppRouter } from "@entrolytics/api-types";
