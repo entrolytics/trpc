@@ -21,11 +21,11 @@ importers:
   .:
     dependencies:
       '@entrolytics/api-types':
-        specifier: ^3.0.0
-        version: 3.0.0(typescript@7.1.0-dev.20260908.1)
+        specifier: ^3.0.1
+        version: 3.0.1(typescript@7.1.0-dev.20260908.1)
       '@entrolytics/shared':
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.0.1
+        version: 3.0.1
       '@trpc/client':
         specifier: ^11.18.0
         version: 11.18.0(@trpc/server@11.18.0(typescript@7.1.0-dev.20260908.1))(typescript@7.1.0-dev.20260908.1)
@@ -66,17 +66,17 @@ packages:
   '@blazediff/core@1.9.1':
     resolution: {integrity: sha512-ehg3jIkYKulZh+8om/O25vkvSsXXwC+skXmyA87FFx6A/45eqOkZsBltMw/TVteb0mloiGT8oGRTcjRAz66zaA==}
 
-  '@entrolytics/api-types@3.0.0':
-    resolution: {integrity: sha512-f2S4KYmtoANLYriB1XTN7hZxTqBy3cwMGXR5n/gN+Gg0Xx80tWDX1TEekvI2Im0mks2nIM8jKeTDBM4zkhAIhQ==}
+  '@entrolytics/api-types@3.0.1':
+    resolution: {integrity: sha512-dD4mB1259tbpTGU9gIVgaDkW42WIrB8UpJax/IPjId+s/zr7oEkYPttiYXeds8jgVKxZlDWqeU+p2EDUX9kTJw==}
 
-  '@entrolytics/config@3.0.0':
-    resolution: {integrity: sha512-09KhjddxVsPiIbaXi45FmbVLFwbOuXkKAZRmaihSFj5p1urCJPUJkABj+XWulltJH47SOIPskuSWb9rf6du8yg==}
+  '@entrolytics/config@3.0.1':
+    resolution: {integrity: sha512-qcAjFsQQ/8Qg/4qO45B+JLfbGrJ3XZdv96xGeeiAgBbkFAzt6NC+91qTaVgxkJw/RXAjSHgtzg36JvzsE/6EgA==}
 
-  '@entrolytics/protocol@3.0.0':
-    resolution: {integrity: sha512-KiwCaYVzbnZQEJ7ICkdGA1f9QzXOUu8s+KeHnx1O93chQoBPoiNIvjfAEMC0gcc+qYmk+ogbLbBKW7va7RlgmA==}
+  '@entrolytics/protocol@3.0.1':
+    resolution: {integrity: sha512-b01Ss7tvj7zmXhTxm281a0G1tGvxo+xqmIkL334/H5j8mdLefyGWnDv1SwlG0kwCZ7ZapN1gT5rungOFpttbow==}
 
-  '@entrolytics/shared@3.0.0':
-    resolution: {integrity: sha512-9JwCk8Ecp6Q0jvjw8nhkfmdmXU6P7J3aglR9sL3HDOTYacmo6+5yWbQJw4w8TNR8YG2ZB94jHzhhb0uszSJcMQ==}
+  '@entrolytics/shared@3.0.1':
+    resolution: {integrity: sha512-7IfuT0fYHcM3rXdmBIQ63+9uF7KXyus0vha1Cvt6Z/fn80yhbizJ/z846XMxc9irHVcHsSmyf8gW/Fjk40KYig==}
 
   '@fastify/ajv-compiler@4.0.6':
     resolution: {integrity: sha512-NtuzM0SfaMJbGlnjr9LWQUN5LzgSrbB8tf/wRZNas+4E1O/Nmzl53e7ruT61HDZyRCJGC6FxIogmNZO1c5ETBA==}
@@ -1263,25 +1263,25 @@ snapshots:
 
   '@blazediff/core@1.9.1': {}
 
-  '@entrolytics/api-types@3.0.0(typescript@7.1.0-dev.20260908.1)':
+  '@entrolytics/api-types@3.0.1(typescript@7.1.0-dev.20260908.1)':
     dependencies:
-      '@entrolytics/config': 3.0.0
-      '@entrolytics/protocol': 3.0.0
+      '@entrolytics/config': 3.0.1
+      '@entrolytics/protocol': 3.0.1
       '@trpc/server': 11.18.0(typescript@7.1.0-dev.20260908.1)
       fastify: 6.0.0-alpha.3
       zod: 4.5.4
     transitivePeerDependencies:
       - typescript
 
-  '@entrolytics/config@3.0.0':
+  '@entrolytics/config@3.0.1':
     dependencies:
       zod: 4.5.4
 
-  '@entrolytics/protocol@3.0.0':
+  '@entrolytics/protocol@3.0.1':
     dependencies:
       zod: 4.5.4
 
-  '@entrolytics/shared@3.0.0': {}
+  '@entrolytics/shared@3.0.1': {}
 
   '@fastify/ajv-compiler@4.0.6':
     dependencies:
