@@ -22,7 +22,7 @@ yarn add @entrolytics/trpc-client
 import { createClient } from "@entrolytics/trpc-client";
 
 const client = createClient({
-  apiUrl: "https://api.entrolytics.click",
+  apiUrl: "https://api.entrolytics.dev",
   apiKey: "your-api-key",
 });
 
@@ -52,7 +52,7 @@ const analytics = await client.analytics.overview.query({
 
 ## API Reference
 
-See the [full API documentation](https://docs.entrolytics.click/api) for all available methods.
+See the [full API documentation](https://docs.entrolytics.dev/api) for all available methods.
 
 ## Migration from REST Client
 

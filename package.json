@@ -30,18 +30,18 @@
   },
   "dependencies": {
     "@entrolytics/api-types": "^3.0.1",
-    "@entrolytics/shared": "^3.0.1",
-    "@trpc/client": "^11.18.0",
-    "@trpc/server": "^11.18.0",
+    "@entrolytics/shared": "^3.1.0",
+    "@trpc/client": "^11.23.0",
+    "@trpc/server": "^11.24.0",
     "superjson": "^2.2.6"
   },
   "devDependencies": {
-    "@types/node": "^26.5.0",
-    "oxfmt": "^0.67.0",
-    "oxlint": "^1.82.0",
-    "tsdown": "^0.23.0",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.76.0",
+    "oxlint": "^1.91.0",
+    "tsdown": "^0.23.5",
     "typescript": "next",
-    "vitest": "^5.0.0"
+    "vitest": "^5.1.0"
   },
-  "packageManager": "pnpm@11.26.0"
+  "packageManager": "pnpm@12.17.0"
 }

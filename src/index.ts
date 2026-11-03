@@ -23,7 +23,7 @@ export interface EntrolyticsTRPCClientConfig {
  * import type { AppRouter } from '@your-backend/routers';
  *
  * const client = createClient<AppRouter>({
- *   apiUrl: 'https://api.entrolytics.click',
+ *   apiUrl: 'https://api.entrolytics.dev',
  *   bearerToken: 'your-cli-or-session-token'
  * });
  *
