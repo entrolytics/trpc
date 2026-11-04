@@ -29,9 +29,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@entrolytics/api-types": "^3.0.1",
-    "@entrolytics/shared": "^3.1.0",
-    "@trpc/client": "^11.23.0",
+    "@entrolytics/api-types": "^6.0.1",
+    "@entrolytics/shared": "^3.2.0",
+    "@trpc/client": "^11.24.0",
     "@trpc/server": "^11.24.0",
     "superjson": "^2.2.6"
   },
