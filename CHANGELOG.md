@@ -5,6 +5,8 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [3.1.2] - 2026-11-26
+
 ### Changed
 
 - Depends on `@trpc/client` and `@trpc/server` 11.31.4.
@@ -19,5 +21,6 @@ All notable changes to this project are documented in this file. The format foll
   report; pixel stats report; slug validation; consolidated REST/tRPC procedures).
 - tRPC 11.31 and superjson updated; toolchain on pnpm 12.23.
 
-[Unreleased]: https://github.com/entrolytics/trpc/compare/v3.1.1...HEAD
+[Unreleased]: https://github.com/entrolytics/trpc/compare/v3.1.2...HEAD
+[3.1.2]: https://github.com/entrolytics/trpc/compare/v3.1.1...v3.1.2
 [3.1.1]: https://github.com/entrolytics/trpc/releases/tag/v3.1.1
