@@ -5,6 +5,11 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+### Changed
+
+- Depends on `@trpc/client` and `@trpc/server` 11.31.4.
+- Built and released with pnpm 12.24.0.
+
 ## [3.1.1] - 2026-11-26
 
 ### Changed
