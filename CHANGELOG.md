@@ -5,9 +5,14 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [3.1.1] - 2026-11-26
+
 ### Changed
 
 - Requires `@entrolytics/api-types` 6.0.3 and `@entrolytics/shared` 3.2.1. The re-exported
   `AppRouter` type now describes the API at 4.1.0 (persistent visitor identity in the retention
   report; pixel stats report; slug validation; consolidated REST/tRPC procedures).
 - tRPC 11.31 and superjson updated; toolchain on pnpm 12.23.
+
+[Unreleased]: https://github.com/entrolytics/trpc/compare/v3.1.1...HEAD
+[3.1.1]: https://github.com/entrolytics/trpc/releases/tag/v3.1.1
