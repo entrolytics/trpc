@@ -5,6 +5,8 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [4.0.1] - 2026-11-28
+
 ### Changed
 
 - Requires `@entrolytics/shared` 3.2.2.
@@ -36,7 +38,8 @@ All notable changes to this project are documented in this file. The format foll
   report; pixel stats report; slug validation; consolidated REST/tRPC procedures).
 - tRPC 11.31 and superjson updated; toolchain on pnpm 12.23.
 
-[Unreleased]: https://github.com/entrolytics/trpc/compare/v4.0.0...HEAD
+[Unreleased]: https://github.com/entrolytics/trpc/compare/v4.0.1...HEAD
+[4.0.1]: https://github.com/entrolytics/trpc/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/entrolytics/trpc/compare/v3.1.2...v4.0.0
 [3.1.2]: https://github.com/entrolytics/trpc/compare/v3.1.1...v3.1.2
 [3.1.1]: https://github.com/entrolytics/trpc/releases/tag/v3.1.1
