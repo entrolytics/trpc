@@ -186,8 +186,8 @@ importers:
   .:
     dependencies:
       '@entrolytics/api-types':
-        specifier: ^7.0.0
-        version: 7.0.0(typescript@7.1.0-dev.20261128.1)
+        specifier: ^7.1.0
+        version: 7.1.0(typescript@7.1.0-dev.20261128.1)
       '@entrolytics/shared':
         specifier: ^3.2.2
         version: 3.2.2
@@ -222,8 +222,8 @@ importers:
 
 packages:
 
-  '@entrolytics/api-types@7.0.0':
-    resolution: {integrity: sha512-v4NlVRNVTie7ZLVaApyjI4y1ikYWDjoT5KPrWkT2vgICtJqMlhrabEpWlWQvqkzq0TP1cDc1B9kKWAqbRsVCfw==}
+  '@entrolytics/api-types@7.1.0':
+    resolution: {integrity: sha512-GzX9ci5C02ki23WULpOvnhlCYjORpryT+S+THFLdyE/StuDYdpyJqp1HCmK9/EAKgxZ9go3bS7WHzItfkBbVTw==}
 
   '@entrolytics/config@5.0.0':
     resolution: {integrity: sha512-BkprEh11JZfYY87YIoJBSmJNQzQ93NWrHGGdAcvKwtHrvkiThCgz4LODC5SGTSIkgxkf37GyhaoFoBuXsbVC+Q==}
@@ -1307,7 +1307,7 @@ packages:
 
 snapshots:
 
-  '@entrolytics/api-types@7.0.0(typescript@7.1.0-dev.20261128.1)':
+  '@entrolytics/api-types@7.1.0(typescript@7.1.0-dev.20261128.1)':
     dependencies:
       '@entrolytics/config': 5.0.0
       '@entrolytics/protocol': 4.1.0

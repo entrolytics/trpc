@@ -5,6 +5,11 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+### Changed
+
+- Requires `@entrolytics/api-types` 7.1.0, which adds the `searchConsole` router (Google Search
+  Console import) to the API's types.
+
 ## [4.0.1] - 2026-11-28
 
 ### Changed
