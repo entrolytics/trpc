@@ -5,6 +5,8 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [4.0.2] - 2026-11-28
+
 ### Changed
 
 - Requires `@entrolytics/api-types` 7.1.0, which adds the `searchConsole` router (Google Search
@@ -43,7 +45,8 @@ All notable changes to this project are documented in this file. The format foll
   report; pixel stats report; slug validation; consolidated REST/tRPC procedures).
 - tRPC 11.31 and superjson updated; toolchain on pnpm 12.23.
 
-[Unreleased]: https://github.com/entrolytics/trpc/compare/v4.0.1...HEAD
+[Unreleased]: https://github.com/entrolytics/trpc/compare/v4.0.2...HEAD
+[4.0.2]: https://github.com/entrolytics/trpc/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/entrolytics/trpc/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/entrolytics/trpc/compare/v3.1.2...v4.0.0
 [3.1.2]: https://github.com/entrolytics/trpc/compare/v3.1.1...v3.1.2
