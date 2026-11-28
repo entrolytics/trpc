@@ -5,6 +5,14 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+### Changed
+
+- **Breaking.** Router types come from `@entrolytics/api-types` 7.0.0, which describes the API after
+  sign-in moved from Clerk to the dashboard itself. `AuthContext` no longer carries `clerkUserId` or
+  `clerkOrgId`, no organization carries `clerkOrgId` or `clerkSyncRequestedAt`, `users.delete` no
+  longer answers `pending`, and accepting an invitation no longer returns `clerkSynced`. User rows
+  carry `bannedAt`. Nothing changes at run time.
+
 ## [3.1.2] - 2026-11-26
 
 ### Changed
