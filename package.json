@@ -30,9 +30,9 @@
   },
   "dependencies": {
     "@entrolytics/api-types": "^7.0.0",
-    "@entrolytics/shared": "^3.2.1",
-    "@trpc/client": "^11.31.4",
-    "@trpc/server": "^11.31.4",
+    "@entrolytics/shared": "^3.2.2",
+    "@trpc/client": "^11.32.2",
+    "@trpc/server": "^11.32.2",
     "superjson": "^2.2.7"
   },
   "devDependencies": {
